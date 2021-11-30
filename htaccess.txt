@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# www無しのURLに統一
+RewriteCond %{HTTP_HOST} ^www\.stylistoffice-emina\.com
+# index.html無しのURLに統一
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*) http://stylistoffice-emina.com/$1 [R=301,L]
+# httpをhttpsに統一
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]

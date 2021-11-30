@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Eminaはスタイリスト寒河江健が設立したファッションスタイリストオフィスです。こちらはお問い合わせ用コンタクトページです。">
+  <title>CONTACT | Emina - Stylist Office -</title>
+<!-- googlefonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+<!-- font-family: 'Anton', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Noto Serif JP', serif; -->
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="../css/style.css">
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+<header class="header contact-header">
+<a href="../"><h1>Emina</h1>
+<p>Stylist Office</p></a>
+<p class="main-title"><span>Emina</span>Stylist Office</p>
+<p class="down"><a href="#contact"><i class="fas fa-chevron-down"></i></a></p>
+</header>
+<div class="main-visual">
+<img src="../img/mv01.jpg" alt="スタイリスト寒河江健（Emina）のサイトメインビジュアル">
+<img src="../img/mv02.jpg" alt="スタイリスト寒河江健（Emina）のサイトメインビジュアル">
+<img src="../img/mv03.jpg" alt="スタイリスト寒河江健（Emina）のサイトメインビジュアル">
+<img src="../img/mv04.jpg" alt="スタイリスト寒河江健（Emina）のサイトメインビジュアル">
+<img src="../img/mv05.jpg" alt="スタイリスト寒河江健（Emina）のサイトメインビジュアル">
+<img src="../img/mv06.jpg" alt="スタイリスト寒河江健（Emina）のサイトメインビジュアル">
+<img src="../img/mv07.jpg" alt="スタイリスト寒河江健（Emina）のサイトメインビジュアル">
+</div> <!-- /.main-visual -->
+<nav class="nav" ontouchstart="">
+<input type="checkbox" id="click">
+<label for="click" id="ham-bar"><span></span></label>
+<ul class="g-nav">
+<li><a href="../">HOME</a></li>
+<li><a href="../#about">ABOUT</a></li>
+<li><a href="../#work">WORK</a></li>
+<li><a href="#">CONTACT</a></li>
+<li class="nav-igicon"><a href="https://www.instagram.com/stylist_sagae_ken/?hl=ja" target="_blank"><i class="fab fa-instagram"></i></a></li>
+</ul>
+</nav>
+
+<div class="content" id="contact">
+<h2>CONTACT</h2>
+<div class="contact-inner">
+<p>ご依頼やご要望などがございましたら、<br>下記フォームよりお問い合わせください。</p>
+<div class="wrapper">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSelfrWZjvb6UNYO3JQ4dk29iJ5k-tzywyhWfRVy_lDKPefNtQ/formResponse" id="form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+<div class="label">Name</div>
+<input id="name" name="entry.47720271" placeholder="" required="required" type="text"/>
+
+<div class="label">Email</div>
+<input id="email" name="entry.1577738066" placeholder="" required="required" type="text"/>
+
+<div class="label">Phone</div>
+<input id="phone" name="entry.44682900" placeholder="" required="required" type="text"/>
+</div> <!-- /.wrapper -->
+
+<div class="wrapper">
+<div class="label">Message</div>
+<textarea id="message" name="entry.1835873585" placeholder="" required="required"></textarea>
+
+<div class="send" ontouchstart="">
+<input id="button" name="button" type="submit" value="Send"/>
+</div>
+</form>
+
+<script type="text/javascript">var submitted = false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='../contact-thanks/';}"></iframe>
+</div> <!-- /.wrapper -->
+</div> <!-- /.contact-inner -->
+
+</div> <!-- /.contact -->
+
+<footer class="footer">
+<ul class="footer-link">
+<li><a href="../">HOME</a></li>
+<li><a href="../#about">ABOUT</a></li>
+<li><a href="../#work">WORK</a></li>
+<li><a href="#contact">CONTACT</a></li>
+</ul>
+<dl class="address">
+<dt>address</dt>
+<dd>〒151-0063</dd>
+<dd>東京都渋谷区富ヶ谷2-13-21 ルセリア205</dd>
+</dl>
+<dl class="telfax">
+<dt>tel & fax</dt>
+<dd>03-6407-9971</dd>
+</dl>
+<p class="footer-igicon"><a href="https://www.instagram.com/stylist_sagae_ken/?hl=ja" target="_blank"><i class="fab fa-instagram"></i></a></p>
+<p><small>&copy; 2021 Emina Stylist Office</small></p>
+</footer>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$(function(){
+
+$('a[href^="#"]').click(function(){
+let href = $(this).attr('href');
+// console.log(href);
+let target = $(href == '#' || href == '' ? 'html' : href);
+let position = target.offset().top;
+// console.log(position);
+$('body,html').animate({scrollTop:position}, 400, 'swing');
+return false;
+});
+
+$('.g-nav a').on('click', function(){
+$('#ham-bar').trigger('click');
+});
+
+}); // $function
+
+</script>
+
+</body>
+</html>

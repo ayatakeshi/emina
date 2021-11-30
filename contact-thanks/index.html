@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>THANKS | Emina - Stylist Office -</title>
+<!-- googlefonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+<!-- font-family: 'Anton', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Noto Serif JP', serif; -->
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="../css/style.css">
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<header class="header thanks-header">
+  <a href="../"><h1>Emina</h1>
+  <p>Stylist Office</p></a>
+  <div class="thanks">
+  <h2>THANKS</h2>
+  <p>お問い合わせありがとうございました。<br>
+  近日中に担当者よりご連絡いたします。</p>
+  </div> <!-- /.thanks -->  
+  
+  <nav class="nav" ontouchstart="">
+  <input type="checkbox" id="click">
+  <label for="click" id="ham-bar"><span></span></label>
+  <ul class="g-nav">
+    <li><a href="../">HOME</a></li>
+    <li><a href="../#about">ABOUT</a></li>
+    <li><a href="../#work">WORK</a></li>
+    <li><a href="../contact/#contact">CONTACT</a></li>
+    <li class="nav-igicon"><a href="https://www.instagram.com/stylist_sagae_ken/?hl=ja" target="_blank"><i class="fab fa-instagram"></i></a></li>
+  </ul>
+  </nav>
+  </header>
+  
+
+<footer class="footer">
+<ul class="footer-link">
+<li><a href="../">HOME</a></li>
+<li><a href="../index.html#about">ABOUT</a></li>
+<li><a href="../index.html#work">WORK</a></li>
+<li><a href="../contact/#contact">CONTACT</a></li>
+</ul>
+<dl class="address">
+<dt>address</dt>
+<dd>〒151-0063</dd>
+<dd>東京都渋谷区富ヶ谷2-13-21 ルセリア205</dd>
+</dl>
+<dl class="telfax">
+<dt>tel & fax</dt>
+<dd>03-6407-9971</dd>
+</dl>
+<p class="footer-igicon"><a href="https://www.instagram.com/stylist_sagae_ken/?hl=ja" target="_blank"><i class="fab fa-instagram"></i></a></p>
+<p><small>&copy; 2021 Emina Stylist Office</small></p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/lightbox.js"></script>
+
+<script>
+$(function(){
+
+$('a[href^="#"]').click(function(){
+let href = $(this).attr('href');
+// console.log(href);
+let target = $(href == '#' || href == '' ? 'html' : href);
+let position = target.offset().top;
+// console.log(position);
+$('body,html').animate({scrollTop:position}, 400, 'swing');
+return false;
+});
+
+$('.g-nav a').on('click', function(){
+$('#ham-bar').trigger('click');
+});
+
+}); // $function
+
+</script>
+</body>
+</html>
